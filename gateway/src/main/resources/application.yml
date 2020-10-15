@@ -7,7 +7,7 @@ spring:
         - TokenRelay
       routes:
         - id: callme-service
-          uri: http://127.0.0.1:8040
+          uri: http://localhost:8040
           predicates:
             - Path=/callme/**
           filters:
@@ -17,9 +17,9 @@ spring:
       client:
         provider:
           keycloak:
-            token-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
-            authorization-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/auth
-            userinfo-uri: http://localhost:8080/auth/realms/master/protocol/openid-connect/userinfo
+            token-uri: http://localhost:8888/auth/realms/master/protocol/openid-connect/token
+            authorization-uri: http://localhost:8888/auth/realms/master/protocol/openid-connect/auth
+            userinfo-uri: http://localhost:8888/auth/realms/master/protocol/openid-connect/userinfo
             user-name-attribute: preferred_username
         registration:
           keycloak-with-test-scope:
