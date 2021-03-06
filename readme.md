@@ -13,10 +13,21 @@ git@github.com:AndriyKalashnykov/sample-spring-security-microservices.git
 cd sample-spring-security-microservices
 ```
 
-## Run and configure Keycloak
+## Configure and Run Keycloak
 
 ```shell
 ./scripts/run-keycloak.sh
+```
+
+### The automation magic
+
+```shell
+# removed for brevity
+docker exec -it keycloak /opt/jboss/keycloak/bin/kcadm.sh config credentials --server http://localhost:8080/auth --realm master --user spring --password spring123 && \
+docker exec -it keycloak /opt/jboss/keycloak/bin/kcadm.sh create -x "client-scopes" -r master -s name=TEST -s protocol=openid-connect && \
+docker exec -it keycloak /opt/jboss/keycloak/bin/kcadm.sh create clients -r master -s clientId=spring-without-test-scope -s enabled=true -s clientAuthenticatorType=client-secret -s secret=f6fc369d-49ce-4132-8282-5b5d413eba23 -s 'redirectUris=["*"]' && \
+docker exec -it keycloak /opt/jboss/keycloak/bin/kcadm.sh create clients -r master -s clientId=spring-with-test-scope -s enabled=true -s clientAuthenticatorType=client-secret -s secret=c6480137-1526-4c3e-aed3-295aabcb7609  -s 'redirectUris=["*"]' -s 'defaultClientScopes=["TEST", "web-origins", "profile", "roles", "email"]'
+# removed for brevity
 ```
 
 Script will run Keycloak Docker container and create Client Scope `TEST` along
