@@ -1,6 +1,6 @@
 # Spring Cloud Gateway OAuth2 with Keycloak
 
-[![test](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml/badge.svg)](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml)
+[![test](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml)
 
 Original article and sources code - [SPRING CLOUD GATEWAY OAUTH2 WITH
 KEYCLOAK](https://piotrminkowski.com/2020/10/09/spring-cloud-gateway-oauth2-with-keycloak/)
