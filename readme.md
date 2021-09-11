@@ -1,4 +1,5 @@
 # Spring Cloud Gateway OAuth2 with Keycloak
+
 [![test](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml/badge.svg)](https://github.com/AndriyKalashnykov/sample-spring-security-microservices/actions/workflows/test.yml)
 
 Original article and sources code - [SPRING CLOUD GATEWAY OAUTH2 WITH
