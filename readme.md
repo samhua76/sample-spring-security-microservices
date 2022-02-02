@@ -17,6 +17,9 @@ cd sample-spring-security-microservices
 
 ## Configure and Run Keycloak
 
+Script will run Keycloak Docker container and create Client Scope `TEST` along
+with Clients: `spring-with-test-scope` and `spring-without-test-scope`
+
 ```shell
 ./scripts/run-keycloak.sh
 ```
@@ -32,10 +35,7 @@ docker exec -it keycloak /opt/jboss/keycloak/bin/kcadm.sh create clients -r mast
 # removed for brevity
 ```
 
-Script will run Keycloak Docker container and create Client Scope `TEST` along
-with Clients: `spring-with-test-scope` and `spring-without-test-scope`. Client
-are created with same values of `client-secret` as in
-`./gateway/src/manin/java/resources/application.yaml`
+Clients are created with same values of `client-secret` as in `./gateway/src/manin/java/resources/application.yaml`
 
 ```yaml
 spring:
