@@ -53,6 +53,7 @@ spring:
             client-id: spring-without-test-scope
             client-secret: f6fc369d-49ce-4132-8282-5b5d413eba23
 ```
+
 Now you can log into Keycloak web UI at `http://localhost:8888/` user : `spring` password: `spring123`
 
 ## Run `callme` service
